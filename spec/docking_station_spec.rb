@@ -2,11 +2,11 @@ require 'DockingStation_Class'
 require 'Bike_Class'
 
 describe DockingStation do
-
+	let(:working_bike){double(:bike, {:working => true})}
 	#it{is_expected.to respond_to(:release_bike)} #Can docking station release a bike?
 
 	it "releases working bike" do #releases a bike that is working
-		subject.dock Bike.new
+		subject.dock working_bike
 		bike = subject.release_bike
 		expect(bike.working).to eq true
 	end
@@ -21,8 +21,8 @@ describe DockingStation do
 
 	describe '#dock' do
 		it 'raises an error if the docking station is full' do
-			subject.get_capacity.times {subject.dock Bike.new}
-			expect{subject.dock Bike.new}.to raise_error 'Docking Station full'
+			subject.get_capacity.times {subject.dock working_bike}
+			expect{subject.dock working_bike}.to raise_error 'Docking Station full'
 		end
 	end
 

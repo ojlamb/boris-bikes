@@ -30,8 +30,7 @@ class DockingStation
 	end
 	private           # => DockingStation
 
-	attr_reader :bikes  # => nil
-	attr_reader :broken_bikes
+	attr_reader :bikes , :broken_bikes
 
 	def full?
 		bikes.count + broken_bikes.count >= @capacity
