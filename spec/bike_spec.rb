@@ -13,5 +13,4 @@ describe Bike do
 		subject.fix
 		expect(subject.working).to be true
 	end
-
 end

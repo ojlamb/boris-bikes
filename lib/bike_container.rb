@@ -28,5 +28,4 @@ module BikeContainer
 
   private
   attr_reader :bikes
-
 end
