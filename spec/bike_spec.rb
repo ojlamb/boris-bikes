@@ -9,4 +9,9 @@ describe Bike do
 		expect(subject).to be_broken
 	end
 
+	it "can be fixed" do
+		subject.fix
+		expect(subject.working).to be true
+	end
+
 end
