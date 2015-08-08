@@ -1,5 +1,6 @@
 class Bike
 	DEFAULT_WORKING = true
+	
 	attr_accessor :bike
 	attr_accessor :working
 
