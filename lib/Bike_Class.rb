@@ -5,7 +5,7 @@ class Bike
   attr_accessor :working
 
   def initialize
-	  @bike
+		@bike
 	  @working = DEFAULT_WORKING
   end
 
