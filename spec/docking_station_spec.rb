@@ -21,8 +21,8 @@ describe DockingStation do
 	end
 
 	it 'does not release broken bikes' do
-  	subject.dock broken_bike
-  	expect {subject.release_bike}.to raise_error 'No bikes available'
+		subject.dock broken_bike
+		expect {subject.release_bike}.to raise_error 'No bikes available'
 	end
 
 	describe '#dock' do
